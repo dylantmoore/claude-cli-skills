@@ -31,6 +31,12 @@ Each skill includes:
 - **`scripts/`** -- Node.js helper modules for parallel execution with concurrency control
 - **`references/`** -- Detailed configuration and CLI reference docs
 
+## Permissions and Sandbox Modes
+
+Both CLIs support flags that grant sub-agents elevated permissions (e.g., `--full-auto`, `--sandbox danger-full-access` for Codex; `--yolo`, `--approval-mode yolo` for Gemini). The parallel execution scripts default to safe settings (`read-only` sandbox for Codex, default approval mode for Gemini), but the SKILL.md docs reference these flags as available options.
+
+If you use the permissive modes, the sub-agents can write files, execute shell commands, and access the network without confirmation. Only use them in trusted, sandboxed environments where you understand what the agent will do.
+
 ## Prerequisites
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed
