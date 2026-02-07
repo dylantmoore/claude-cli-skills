@@ -19,13 +19,13 @@
 
 const { spawn } = require('child_process');
 
-const DEFAULT_MODEL = 'gpt-5.2-xhigh';
+const DEFAULT_MODEL = 'gpt-5.3-codex';
 
 /**
  * Execute a single Codex CLI call
  * @param {string} prompt - The prompt to send
  * @param {Object} options - Options
- * @param {string} options.model - Model to use (default: gpt-5.2-xhigh)
+ * @param {string} options.model - Model to use (default: gpt-5.3-codex)
  * @param {string} options.cwd - Working directory
  * @param {boolean} options.skipGitCheck - Skip git repo requirement
  * @param {string} options.sandbox - Sandbox mode: read-only, workspace-write, danger-full-access

@@ -12,7 +12,7 @@
 # =============================================================================
 
 # Default model for all operations
-model = "gpt-5.2-codex"
+model = "gpt-5.3-codex"
 
 # Reasoning effort level: "low", "medium", "high", "xhigh"
 # IMPORTANT: Always use "high" or "xhigh" for best results
@@ -90,7 +90,7 @@ codex exec -c model_reasoning_effort="high" "prompt"
 codex exec -c 'sandbox_permissions=["disk-full-read-access", "network-access"]' "prompt"
 
 # Multiple overrides
-codex exec -c model="gpt-5.2-codex" -c model_reasoning_effort="high" "prompt"
+codex exec -c model="gpt-5.3-codex" -c model_reasoning_effort="high" "prompt"
 
 # Nested values use dotted paths
 codex exec -c shell_environment_policy.inherit="all" "prompt"
@@ -102,11 +102,11 @@ Define named profiles in config.toml:
 
 ```toml
 [profiles.default]
-model = "gpt-5.2-codex"
+model = "gpt-5.3-codex"
 model_reasoning_effort = "high"
 
 [profiles.thorough]
-model = "gpt-5.2-codex"
+model = "gpt-5.3-codex"
 model_reasoning_effort = "xhigh"
 ```
 
@@ -125,15 +125,17 @@ codex exec -p thorough "complex analysis"
 | `OPENAI_API_KEY` | Fallback API key |
 | `CODEX_CONFIG_PATH` | Custom config file location |
 
-## Model Aliases (USE ONLY 5.2)
+## Model Aliases (USE ONLY 5.3)
 
-**ONLY use GPT-5.2 models. NEVER use older models.**
+**ONLY use GPT-5.3 models. NEVER use older models.**
 
 | Alias | Use For | Status |
 |-------|---------|--------|
-| `gpt-5.2-codex` | Coding tasks (code review, debugging, writing code) | ✅ **USE** |
-| `gpt-5.2` | Everything else (research, writing, analysis) | ✅ **USE** |
-| `gpt-5.2-xhigh` | N/A | ❌ **DO NOT USE** - Not available |
+| `gpt-5.3-codex` | Coding tasks (code review, debugging, writing code) | ✅ **USE** |
+| `gpt-5.3` | Everything else (research, writing, analysis) | ✅ **USE** |
+| `gpt-5.3-xhigh` | N/A | ❌ **DO NOT USE** - Not available |
+| `gpt-5.2-codex` | N/A | ❌ **DO NOT USE** - Outdated |
+| `gpt-5.2` | N/A | ❌ **DO NOT USE** - Outdated |
 | `gpt-5.1-codex-max` | N/A | ❌ **DO NOT USE** - Outdated |
 | `o3` | N/A | ❌ **DO NOT USE** - Outdated |
 | `o4-mini` | N/A | ❌ **DO NOT USE** - Outdated |
