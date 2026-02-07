@@ -7,11 +7,11 @@ description: Write scripts that programmatically call OpenAI's Codex CLI in head
 
 > **🚨 CRITICAL: NEVER USE OLDER MODELS 🚨**
 >
-> **ONLY use GPT-5.3 models:**
+> **ONLY use these models:**
 > - `gpt-5.3-codex` — for coding tasks (code review, debugging, writing code, etc.)
-> - `gpt-5.3` — for everything else (research, writing, analysis, etc.)
+> - `gpt-5.2` — for everything else (research, writing, analysis, etc.)
 >
-> **NEVER use:** `o3`, `o4-mini`, `gpt-5.1-codex-max`, `gpt-5.2-codex`, `gpt-5.2`, or any other older model.
+> **NEVER use:** `o3`, `o4-mini`, `gpt-5.1-codex-max`, `gpt-5.2-codex`, or any other older model.
 >
 > **ALWAYS set reasoning effort explicitly:** `-c model_reasoning_effort="high"` (or `"xhigh"`)
 >
@@ -54,15 +54,13 @@ codex exec --search "What are the latest Node.js security updates?"
 codex exec --json --search -m gpt-5.3-codex -c model_reasoning_effort="high" "Research best practices for..."
 ```
 
-### Available Models (USE ONLY 5.3)
+### Available Models
 
 | Model | ID | Use For |
 |-------|-----|---------|
 | GPT-5.3 Codex | `gpt-5.3-codex` | ✅ **Coding tasks** (code review, debugging, writing code) |
-| GPT-5.3 | `gpt-5.3` | ✅ **Everything else** (research, writing, analysis) |
-| ~~GPT-5.3 XHigh~~ | `gpt-5.3-xhigh` | ❌ **DO NOT USE** - Not available |
-| ~~GPT-5.2 Codex~~ | `gpt-5.2-codex` | ❌ **DO NOT USE** - Outdated |
-| ~~GPT-5.2~~ | `gpt-5.2` | ❌ **DO NOT USE** - Outdated |
+| GPT-5.2 | `gpt-5.2` | ✅ **Everything else** (research, writing, analysis) |
+| ~~GPT-5.2 Codex~~ | `gpt-5.2-codex` | ❌ **DO NOT USE** - Outdated (use `gpt-5.3-codex`) |
 | ~~GPT-5.1 Codex Max~~ | `gpt-5.1-codex-max` | ❌ **DO NOT USE** - Outdated |
 | ~~o3~~ | `o3` | ❌ **DO NOT USE** - Outdated |
 | ~~o4-mini~~ | `o4-mini` | ❌ **DO NOT USE** - Outdated |
@@ -152,7 +150,7 @@ codex exec --search "Research current state of WebGPU adoption and browser suppo
 codex exec --search --json "Find the latest stable version of TypeScript"
 
 # Compare current technologies
-codex exec --search -m gpt-5.3-codex -c model_reasoning_effort="high" "Compare Vite vs Webpack in 2025"
+codex exec --search -m gpt-5.2 -c model_reasoning_effort="high" "Compare Vite vs Webpack in 2025"
 
 # Verify documentation or API changes
 codex exec --search "Check if React useEffect cleanup behavior changed in recent versions"

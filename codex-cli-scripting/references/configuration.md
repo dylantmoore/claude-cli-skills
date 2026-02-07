@@ -125,17 +125,15 @@ codex exec -p thorough "complex analysis"
 | `OPENAI_API_KEY` | Fallback API key |
 | `CODEX_CONFIG_PATH` | Custom config file location |
 
-## Model Aliases (USE ONLY 5.3)
+## Model Aliases
 
-**ONLY use GPT-5.3 models. NEVER use older models.**
+**Use `gpt-5.3-codex` for coding, `gpt-5.2` for everything else.**
 
 | Alias | Use For | Status |
 |-------|---------|--------|
 | `gpt-5.3-codex` | Coding tasks (code review, debugging, writing code) | ✅ **USE** |
-| `gpt-5.3` | Everything else (research, writing, analysis) | ✅ **USE** |
-| `gpt-5.3-xhigh` | N/A | ❌ **DO NOT USE** - Not available |
-| `gpt-5.2-codex` | N/A | ❌ **DO NOT USE** - Outdated |
-| `gpt-5.2` | N/A | ❌ **DO NOT USE** - Outdated |
+| `gpt-5.2` | Everything else (research, writing, analysis) | ✅ **USE** |
+| `gpt-5.2-codex` | N/A | ❌ **DO NOT USE** - Outdated (use `gpt-5.3-codex`) |
 | `gpt-5.1-codex-max` | N/A | ❌ **DO NOT USE** - Outdated |
 | `o3` | N/A | ❌ **DO NOT USE** - Outdated |
 | `o4-mini` | N/A | ❌ **DO NOT USE** - Outdated |
