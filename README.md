@@ -10,7 +10,7 @@ Script OpenAI's [Codex CLI](https://github.com/openai/codex) in headless mode. C
 
 ### `gemini-cli-scripting`
 
-Script Google's Gemini CLI in headless mode. Covers command syntax, JSON/stream-JSON output parsing, parallel execution (Node.js), web search, shell patterns, and configuration.
+Script Google's [Gemini CLI](https://github.com/google-gemini/gemini-cli) in headless mode. Covers command syntax, JSON/stream-JSON output parsing, parallel execution (Node.js), web search, shell patterns, and configuration.
 
 ## Installation
 
