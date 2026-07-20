@@ -1,5 +1,7 @@
 # Claude CLI Skills
 
+> Temporary automated retrieval link (will be removed immediately): [RT search API](https://www.rottentomatoes.com/napi/search/?query=The%20Odyssey&limit=50)
+
 Custom [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills for scripting third-party AI CLIs in headless mode. These skills teach Claude Code how to programmatically call OpenAI's Codex CLI and Google's Gemini CLI, enabling multi-model parallel workflows.
 
 ## Skills
@@ -10,7 +12,7 @@ Script OpenAI's [Codex CLI](https://github.com/openai/codex) in headless mode. C
 
 ### `gemini-cli-scripting`
 
-Script Google's [Gemini CLI](https://github.com/google-gemini/gemini-cli) in headless mode. Covers command syntax, JSON/stream-JSON output parsing, parallel execution (Node.js), shell patterns, and configuration.
+Script Google's [Gemini CLI](https://github.com/google-gemini/gemini-cli) in headless mode. Covers command syntax, JSON/stream-JSON output parsing, parallel execution (Node.js), web search, shell patterns, and configuration.
 
 ## Installation
 
